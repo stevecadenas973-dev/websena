@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Centollo - Integrantes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styl.css">
+    <style>
+        .integrantes-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .integrantes-section h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .integrantes-section p.subtitulo {
+            color: #777;
+            margin-bottom: 40px;
+            font-size: 15px;
+        }
+
+        .integrantes-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .integrante-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            padding: 30px 30px 24px;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .integrante-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .foto-placeholder {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            border: 3px dashed #4caf50;
+            margin: 0 auto 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .foto-placeholder i {
+            font-size: 40px;
+            color: #bbb;
+            margin-bottom: 6px;
+        }
+
+        .foto-placeholder span {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .foto-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+            position: absolute;
+            top: 0; left: 0;
+        }
+
+        .foto-placeholder input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .integrante-card h3 {
+            font-size: 18px;
+            color: #222;
+            margin-bottom: 4px;
+        }
+
+        .integrante-card .rol {
+            font-size: 13px;
+            color: #4caf50;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .integrante-card p {
+            font-size: 13px;
+            color: #777;
+            line-height: 1.5;
+        }
+
+        .titulo-pagina {
+            padding: 30px 20px 5px;
+            font-size: 35px;
+            text-align: center;
+            color: #111;
+        }
+        .integrante-card{
+    background:white;
+    border-radius:12px;
+    box-shadow:0 4px 16px rgba(0,0,0,.10);
+    padding:30px;
+    width:280px;
+    text-align:center;
+}
+
+.foto-placeholder{
+    width:160px;
+    height:160px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    overflow:hidden;
+    border:4px solid #4caf50;
+}
+
+.foto-placeholder img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.integrante-card h3{
+    margin-bottom:5px;
+    color:#222;
+}
+
+.integrante-card h4{
+    margin-bottom:10px;
+    color:#555;
+}
+
+.rol{
+    color:#4caf50;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+       <img src="img/logo.png" width="20%" >
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">inicio</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="integrantes.html" style="color:#4caf50;">Integrantes</a></li>
+        </ul>
+    </nav>
+<center>
+    <div class="integrante-card">
+
+    <div class="foto-placeholder">
+        <img src="img/999.jpeg" alt="Steve Cárdenas">
+    </div>
+
+    <h3>Steve Cárdenas Moya</h3>
+    <h4>Juan David Erazo</h4>
+
+    <div class="rol">
+        Desarrolladores de Software
+    </div>
+
+    <p>Estudiantes de Desarrollo Web</p>
+
+</div>
+</center>
+       
+
+         
+            
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-features">
+            <div class="feature-item">
+                <div class="icon-placeholder">DESDE <span>1911</span></div>
+                <h3>MÁS DE 100 AÑOS</h3>
+                <p>Desde 1911 trabajando con el mejor producto del mar</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-fish feature-icon"></i>
+                <h3>EL PRODUCTO MÁS FRESCO</h3>
+                <p>Pescados y mariscos directos de la lonja</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-fire feature-icon"></i>
+                <h3>AHUMADOS ARTESANALES</h3>
+                <p>Descubre nuestros procesos de ahumado</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-shop feature-icon"></i>
+                <h3>TIENDA PROPIA</h3>
+                <p>También te servimos en nuestra tienda física</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-star feature-icon"></i>
+                <h3>SELECCIONAMOS POR TI</h3>
+                <p>Despreocúpate y disfruta del mejor género del mar</p>
+            </div>
+        </div>
+        <div class="footer-info">
+            <div class="contact-details">
+                <p><i class="fa-solid fa-location-dot"></i> Carrera 1 #93-50 Chicó Alto, Bogotá</p>
+                <p><i class="fa-solid fa-phone"></i> Tel: (57) 316 690 0508</p>
+                <p><i class="fa-solid fa-envelope"></i> servicioalcliente@tramonti.com.co</p>
+            </div>
+            <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" class="social-btn telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="social-btn plus"><i class="fa-solid fa-plus"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    function cargarFoto(input, imgId, placeholderId) {
+        const file = input.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const img = document.getElementById(imgId);
+            img.src = e.target.result;
+            img.style.display = 'block';
+            const ph = document.getElementById(placeholderId);
+            ph.querySelector('i').style.display = 'none';
+            ph.querySelector('span').style.display = 'none';
+        };
+        reader.readAsDataURL(file);
+    }
+    </script>
+
+</body>
+</html>

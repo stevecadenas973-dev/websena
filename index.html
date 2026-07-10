@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Centollo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+    <header>
+       <img src="img/logo.png" width="20%" >
+        
+    </header>
+
+    <nav>
+        <ul>
+             <li><a href="index.html">inicio</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="integrantes.html" style="color:#4caf50;">Integrantes</a></li>
+        </ul>
+    </nav>
+
+   <!-- POPUP PRODUCTO DEL DÍA -->
+<div id="popupProducto" class="popup-overlay">
+
+    <div class="popup-producto">
+
+        <button class="cerrar-popup" onclick="cerrarPopup()">&times;</button>
+
+        <img src="img/cangrejo.jpg" alt="Producto del Día">
+
+        <div class="popup-info">
+
+            <span class="etiqueta">🔥 PRODUCTO DEL DÍA</span>
+
+            <h2>Cangrejo Real Premium</h2>
+
+            <p>
+                Nuestro plato estrella del día. Cangrejo real fresco,
+                preparado con especias especiales y acompañado de guarnición
+                de la casa.
+            </p>
+
+            <div class="precio-dia">
+                <del>$60.000</del>
+                <span>$49.900</span>
+            </div>
+
+            <a href="menu.html" class="btn-dia">Pedir Ahora</a>
+
+        </div>
+
+    </div>
+<script>
+
+window.onload = function(){
+
+    if(sessionStorage.getItem("popupProducto")=="cerrado"){
+        document.getElementById("popupProducto").style.display="none";
+    }
+
+}
+
+function cerrarPopup(){
+
+    document.getElementById("popupProducto").style.display="none";
+    sessionStorage.setItem("popupProducto","cerrado");
+
+}
+
+</script>
+</div>
+    </section>
+    <script>
+        // Cambia esta línea a "false" si quieres desactivar la promo
+        // por completo (para todos los visitantes, sin botón de cierre).
+        const mostrarPromo = true;
+
+        const promoDia = document.getElementById('promoDia');
+
+        if (!mostrarPromo) {
+            promoDia.style.display = 'none';
+        } else {
+            // Si el visitante ya la cerró en esta sesión, no volver a mostrarla
+            if (sessionStorage.getItem('promoCerrada') === 'true') {
+                promoDia.style.display = 'none';
+            }
+            document.getElementById('cerrarPromo').addEventListener('click', () => {
+                promoDia.style.display = 'none';
+                sessionStorage.setItem('promoCerrada', 'true');
+            });
+        }
+    </script>
+    <!-- ===================== FIN PROMOCIÓN DEL DÍA ===================== -->
+
+    <div class="contenedor">
+
+        <div class="slider">
+            <div class="slider-img-wrap">
+                <img id="imagen" src="img/centolio.jpg" alt="Centollo">
+            </div>
+            <div class="dots" id="dots"></div>
+        </div>
+
+        <div class="info">
+            <h2 id="titulo">Centollo</h2>
+            <p id="descripcion">
+                También conocido como Changurro o Txangurro, Cámbara, Araña, Cranca, Pateiro, Bruño o Cangrejo velludo. Es un <strong>crustáceo braquiuro</strong> y decápodo. Pertenece a la familia Majidae, la misma que los Cangrejos. Vive en la costa en fondos rocosos o arenosos. Habita en profundidades mayores de 100m.
+            </p>
+
+            <hr>
+
+            <p><strong id="nombreComun">Centollo</strong> <em id="nombreCientifico">Maja squinado</em></p>
+            <p><strong>(Eng)</strong> <span id="nombreEng">Spinous spider crab</span></p>
+            <p><strong>(Fr)</strong> <span id="nombreFr">Araignée européenne</span></p>
+
+            <hr>
+
+            <p class="fila-datos">
+                <span><strong>Peso</strong> <span id="peso">500 gr - 4 kg</span></span>
+                <span><strong>Dimensiones</strong> <span id="dimensiones">12 - 20 cm</span></span>
+            </p>
+        </div>
+
+    </div>
+<script>
+const datos = [
+{
+    imagen:"img/centolio.jpg",
+    titulo:"Centollo",
+    descripcion:"También conocido como Changurro o Txangurro, Cámbara, Araña, Cranca, Pateiro, Bruño o Cangrejo velludo. Es un <strong>crustáceo braquiuro</strong> y decápodo. Pertenece a la familia Majidae, la misma que los Cangrejos. Vive en la costa en fondos rocosos o arenosos. Habita en profundidades mayores de 100m.",
+    nombreComun:"Centollo",
+    nombreCientifico:"Maja squinado",
+    nombreEng:"Spinous spider crab",
+    nombreFr:"Araignée européenne",
+    peso:"500 gr - 4 kg",
+    dimensiones:"12 - 20 cm"
+},
+{
+    imagen:"img/langosta.jpg",
+    titulo:"Langosta",
+    descripcion:"También conocida como Langosta europea o Langosta roja. Es un <strong>crustáceo decápodo</strong> sin pinzas delanteras, reconocible por sus largas antenas y su caparazón espinoso. Pertenece a la familia Palinuridae. Vive en fondos rocosos de aguas templadas, escondida en cuevas y grietas.",
+    nombreComun:"Langosta",
+    nombreCientifico:"Palinurus elephas",
+    nombreEng:"European spiny lobster",
+    nombreFr:"Langouste rouge",
+    peso:"1 - 6 kg",
+    dimensiones:"20 - 60 cm"
+},
+{
+    imagen:"img/camaron.jpg",
+    titulo:"Camarón",
+    descripcion:"También conocido como Gamba o Quisquilla. Es un <strong>crustáceo decápodo</strong> de cuerpo alargado y caparazón delgado y translúcido. Vive en ríos, estuarios y fondos marinos de poca profundidad. Es uno de los mariscos más consumidos del mundo por su versatilidad en la cocina.",
+    nombreComun:"Camarón",
+    nombreCientifico:"Litopenaeus vannamei",
+    nombreEng:"Whiteleg shrimp",
+    nombreFr:"Crevette blanche",
+    peso:"10 - 50 gr",
+    dimensiones:"5 - 20 cm"
+},
+{
+    imagen:"img/pulpo.jpg",
+    titulo:"Pulpo",
+    descripcion:"También conocido como Pulpo común o Pulpo de roca. Es un <strong>molusco cefalópodo</strong> sin esqueleto interno, dotado de ocho tentáculos cubiertos de ventosas que utiliza para desplazarse, camuflarse y capturar alimento. Habita en fondos rocosos y arenosos de aguas costeras.",
+    nombreComun:"Pulpo",
+    nombreCientifico:"Octopus vulgaris",
+    nombreEng:"Common octopus",
+    nombreFr:"Poulpe commun",
+    peso:"1 - 15 kg",
+    dimensiones:"30 - 100 cm"
+},
+{
+    imagen:"img/cangrejo.jpg",
+    titulo:"Cangrejo Real",
+    descripcion:"También conocido como King Crab o Cangrejo real rojo. Es un <strong>crustáceo decápodo</strong> de gran tamaño, con caparazón cubierto de espinas y patas extremadamente largas. Habita en aguas frías del norte del océano Pacífico, a gran profundidad.",
+    nombreComun:"Cangrejo Real",
+    nombreCientifico:"Paralithodes camtschaticus",
+    nombreEng:"Red king crab",
+    nombreFr:"Crabe royal",
+    peso:"2 - 10 kg",
+    dimensiones:"hasta 1,5 m"
+}
+];
+
+let indice = 0;
+let temporizador;
+
+const elImagen = document.getElementById("imagen");
+const elTitulo = document.getElementById("titulo");
+const elDescripcion = document.getElementById("descripcion");
+const elNombreComun = document.getElementById("nombreComun");
+const elNombreCientifico = document.getElementById("nombreCientifico");
+const elNombreEng = document.getElementById("nombreEng");
+const elNombreFr = document.getElementById("nombreFr");
+const elPeso = document.getElementById("peso");
+const elDimensiones = document.getElementById("dimensiones");
+const contenedorDots = document.getElementById("dots");
+
+datos.forEach((item, i) => {
+    const dot = document.createElement("button");
+    dot.classList.add("dot");
+    dot.setAttribute("aria-label", item.titulo);
+    if(i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+        mostrar(i);
+        reiniciarAutoplay();
+    });
+    contenedorDots.appendChild(dot);
+});
+
+function mostrar(i){
+    indice = i;
+    const item = datos[indice];
+
+    elImagen.style.opacity = 0;
+
+    setTimeout(() => {
+        elImagen.src = item.imagen;
+        elImagen.alt = item.titulo;
+        elTitulo.textContent = item.titulo;
+        elDescripcion.innerHTML = item.descripcion;
+        elNombreComun.textContent = item.nombreComun;
+        elNombreCientifico.textContent = item.nombreCientifico;
+        elNombreEng.textContent = item.nombreEng;
+        elNombreFr.textContent = item.nombreFr;
+        elPeso.textContent = item.peso;
+        elDimensiones.textContent = item.dimensiones;
+        elImagen.style.opacity = 1;
+    }, 150);
+
+    document.querySelectorAll(".dot").forEach((d, di) => {
+        d.classList.toggle("active", di === indice);
+    });
+}
+
+function siguiente(){
+    let nuevo = indice + 1;
+    if(nuevo >= datos.length) nuevo = 0;
+    mostrar(nuevo);
+}
+
+function reiniciarAutoplay(){
+    clearInterval(temporizador);
+    temporizador = setInterval(siguiente, 4000);
+}
+
+reiniciarAutoplay();
+</script>
+    </main>
+    
+ 
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-features">
+            <div class="feature-item">
+                <div class="icon-placeholder">DESDE <span>1911</span></div>
+                <h3>MÁS DE 100 AÑOS</h3>
+                <p>Desde 1911 trabajando con el mejor producto del mar</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-fish feature-icon"></i>
+                <h3>EL PRODUCTO MÁS FRESCO</h3>
+                <p>Pescados y mariscos directos de la lonja</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-fire feature-icon"></i>
+                <h3>AHUMADOS ARTESANALES</h3>
+                <p>Descubre nuestros procesos de ahumado</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-shop feature-icon"></i>
+                <h3>TIENDA PROPIA</h3>
+                <p>También te servimos en nuestra tienda física</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-star feature-icon"></i>
+                <h3>SELECCIONAMOS POR TI</h3>
+                <p>Despreocúpate y disfruta del mejor género del mar</p>
+            </div>
+        </div>
+        <div class="footer-info">
+            <div class="contact-details">
+                <p><i class="fa-solid fa-location-dot"></i> Carrera 1 #93-50 Chicó Alto, Bogotá</p>
+                <p><i class="fa-solid fa-phone"></i> Tel: (57) 316 690 0508</p>
+                <p><i class="fa-solid fa-envelope"></i> servicioalcliente@tramonti.com.co</p>
+            </div>
+            <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="social-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" class="social-btn telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#" class="social-btn plus"><i class="fa-solid fa-plus"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL INTEGRANTES -->
+    <div class="modal-overlay" id="modalIntegrantes">
+        <div class="modal-box">
+            <button class="modal-close" onclick="document.getElementById('modalIntegrantes').classList.remove('active')">&times;</button>
+            <h2><i class="fa-solid fa-users"></i> Integrantes</h2>
+            <ul>
+                <li><i class="fa-solid fa-user"></i> Nombre Apellido 1</li>
+                <li><i class="fa-solid fa-user"></i> Nombre Apellido 2</li>
+                <li><i class="fa-solid fa-user"></i> Nombre Apellido 3</li>
+                <li><i class="fa-solid fa-user"></i> Nombre Apellido 4</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    const btnIntegrantes = document.getElementById('btnIntegrantes');
+    if(btnIntegrantes){
+        btnIntegrantes.addEventListener('click', function(){
+            document.getElementById('modalIntegrantes').classList.add('active');
+        });
+    }
+    document.getElementById('modalIntegrantes').addEventListener('click', function(e){
+        if(e.target === this) this.classList.remove('active');
+    });
+    </script>
+
+</body>
+</html>
